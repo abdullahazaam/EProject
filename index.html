@@ -11,37 +11,37 @@
 </head>
 <body>
   <header>
-    <div class="logo"><img src="./pictures.jpg/logo.png"></div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-color" >
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="logo"><img src="./pictures.jpg/logo.png"></div>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mx-auto text-white fs-5 ">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#personal">Personal</a>
+              <a class="nav-link active" aria-current="page" href="#personal" style="color: white;"><b>Personal</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#education">Education</a>
+              <a class="nav-link active" aria-current="page" href="#education" style="color: white;"><b>Education</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#career">Career</a>
+              <a class="nav-link active" aria-current="page" href="#career" style="color: white;"><b>Career</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#achievements">Achievements</a>
+              <a class="nav-link active" aria-current="page" href="#achievements" style="color: white;"><b>Achievement</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#nobel">Nobel Work</a>
+              <a class="nav-link active" aria-current="page" href="#nobel" style="color: white;"><b>Nobel Work</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#books">Books</a>
+              <a class="nav-link active" aria-current="page" href="#books" style="color: white;"><b>Books</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#summary">Summary</a>
+              <a class="nav-link active" aria-current="page" href="#summary" style="color: white;"><b>Summary</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#FAQs">FAQs</a>
+              <a class="nav-link active" aria-current="page" href="#FAQs" style="color: white;"><b>FAQ</b></a>
             </li>
             
           </ul>
@@ -70,7 +70,7 @@
     <div class="text-box">
       <h2 style="font-size: xx-large; font-family: felix-titling;">EDUCATION</h2>
       <p>
-        alam attended Government College University, Lahore, where he excelled academically. He later went to St John's College, Cambridge, on a scholarship, earning a double first in mathematics and physics. He completed his Ph.D. in theoretical physics at Cambridge, setting the stage for a distinguished scientific career.
+        <br>Dr. Abdus Salam pursued his undergraduate studies at Punjab University, earning a BA and MA in 1944 and 1946 respectively. He then moved to the University of Cambridge to study physics, where he earned his BA in 1948 and his PhD in 1952. His PhD thesis, published in 1951, focused on quantum electrodynamics and garnered him international recognition. He later returned to Pakistan, holding positions at Government College, Lahore, and the University of Punjab, before returning to Cambridge and later to Imperial College London. He also served as the Director of the International Centre for Theoretical Physics (ICTP) in Trieste, Italy. 
       </p>
     </div>
     <div class="image-box">
@@ -95,11 +95,18 @@
     <div class="text-box">
       <h2 style="font-size: xx-large; font-family: felix-titling;">ACHIEVEMENTS</h2>
       <p>
-        Dr. Salam was elected Fellow of the Royal Society at the age of 33, received the Adams Prize, the Hughes Medal, and established the International Centre for Theoretical Physics (ICTP) in Trieste, Italy. His mission was to bridge the gap between scientists from developed and developing countries.
+        Dr. Abdus Salam, a Pakistani physicist, made significant contributions to theoretical physics, most notably in the unification of weak and electromagnetic interactions, which he shared with Sheldon Glashow and Steven Weinberg in the 1979 Nobel Prize in Physics. His work also included contributions to two-component neutrino theory, symmetry properties of elementary particles, and supersymmetry. <br><br>
+        
+      Here's a more detailed look at his achievements:
+      <b>Electroweak Unification:</b>
+        Salam, Glashow, and Weinberg independently unified the weak and electromagnetic forces into a single electroweak force. This was a major step in understanding the fundamental forces of nature. <br>
+      <b>Neutrino Theory:</b>
+        Salam developed the two-component neutrino theory, which predicted that neutrinos are left-handed, a concept later confirmed experimentally. <br>
       </p>
     </div>
     <div class="image-box">
       <img src="./pictures.jpg/Achievment.jpg" alt="Dr. Abdus Salam">
+      <img src="./pictures.jpg/acheivment 2" alt="Dr. Abdus Salam">
     </div>
   </div>
 
@@ -157,7 +164,7 @@ Salam's work, along with that of Glashow and Weinberg, was instrumental in shapi
           </div>
       
 
-          <div class="card mb-3" style="max-width: 90vw;">
+          <div class="card mb-3" style="max-width: 100vw;">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="./pictures.jpg/book 2.jpg" class="img-fluid rounded-start" height="700px" width="400px" alt="...">
@@ -316,6 +323,129 @@ Salam's work, along with that of Glashow and Weinberg, was instrumental in shapi
     </div>
   </footer>
 
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form from submitting
+
+    let isValid = true;
+
+    // Get elements
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const ratingField = document.getElementById('rating');
+    const commentsField = document.getElementById('comments');
+
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const rating = ratingField.value;
+    const comments = commentsField.value.trim();
+
+    // Reset validation states
+    resetValidation(nameField, 'nameError');
+    resetValidation(emailField, 'emailError');
+    resetValidation(ratingField, 'ratingError');
+    commentsField.classList.remove('is-valid', 'is-invalid');
+
+    // Name validation
+    if (name === '') {
+      showError(nameField, 'nameError', 'Name is required.');
+      isValid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(name)) {
+      showError(nameField, 'nameError', 'Name must contain only letters.');
+      isValid = false;
+    } else {
+      showSuccess(nameField);
+    }
+
+    // Email validation
+    if (email === '') {
+      showError(emailField, 'emailError', 'Email is required.');
+      isValid = false;
+    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+      showError(emailField, 'emailError', 'Please enter a valid email.');
+      isValid = false;
+    } else {
+      showSuccess(emailField);
+    }
+
+    // Rating validation
+    if (rating === '') {
+      showError(ratingField, 'ratingError', 'Rating is required.');
+      isValid = false;
+    } else {
+      showSuccess(ratingField);
+    }
+
+    // Comments validation
+    if (comments === '') {
+      commentsField.classList.add('is-invalid');
+      alert('Comments are required.');
+      isValid = false;
+    } else {
+      commentsField.classList.add('is-valid');
+    }
+
+    if (isValid) {
+      alert('Feedback submitted successfully!');
+      document.getElementById('feedbackForm').reset();
+      removeValidationStyles();
+    }
+  });
+
+  function showError(input, errorId, message) {
+    const errorElement = document.getElementById(errorId);
+    errorElement.textContent = message;
+    input.classList.add('is-invalid');
+    input.classList.remove('is-valid');
+  }
+
+  function showSuccess(input) {
+    input.classList.add('is-valid');
+    input.classList.remove('is-invalid');
+  }
+
+  function resetValidation(input, errorId) {
+    input.classList.remove('is-valid', 'is-invalid');
+    document.getElementById(errorId).textContent = '';
+  }
+
+  function removeValidationStyles() {
+    document.querySelectorAll('input, select, textarea').forEach(el => {
+      el.classList.remove('is-valid', 'is-invalid');
+    });
+  }
+
+  function validateEmail() {
+    const emailInput = document.getElementById('newsletterEmail');
+    const errorDiv = document.getElementById('newsletterError');
+    const email = emailInput.value.trim();
+
+    // Reset validation
+    errorDiv.textContent = '';
+    emailInput.classList.remove('is-valid', 'is-invalid');
+
+    // Check if empty
+    if (email === '') {
+      errorDiv.textContent = 'Email is required.';
+      emailInput.classList.add('is-invalid');
+      return false; // Prevent form submission
+    }
+
+    // Validate email format
+    const emailPattern = /^\S+@\S+\.\S+$/;
+    if (!emailPattern.test(email)) {
+      errorDiv.textContent = 'Please enter a valid email address.';
+      emailInput.classList.add('is-invalid');
+      return false;
+    }
+
+    // Success
+    emailInput.classList.add('is-valid');
+    alert('Subscribed successfully!');
+    return true;
+  }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
